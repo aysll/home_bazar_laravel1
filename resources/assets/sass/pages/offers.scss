@@ -1,0 +1,21 @@
+.offerPicture{
+	background-image: url('../../images/discount.jpeg');
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 750px;
+        position: relative;
+        width: 100%;
+}
+#offers{
+	h2{
+		margin-bottom: 30px;
+	}
+	.oldPrice{
+		text-decoration: line-through;
+	}
+	.newPrice{
+		color: #c62828;
+	}
+}

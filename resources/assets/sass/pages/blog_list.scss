@@ -1,0 +1,148 @@
+$ayselfont:'Lato', sans-serif;
+$ayselgreen:#8ac43f;
+$ayselwhite:#fff;
+$ayselgray:#D3D3D3;
+
+.blog{
+	height: 150px;
+	background: $ayselgreen;
+	text-align: center;
+	font-famil:$ayselfont ;
+	cursor:pointer;
+	color: $ayselwhite;
+	padding-top: 38px;
+
+
+}
+.iconspan{
+	font: 18px $ayselfont ;
+	height: 64px;
+	padding-top: 32px;
+
+	.icon{
+		font-size: 73%;
+		margin:0px 10px 0px 10px; 
+		color:$ayselgray;
+	}
+	a{
+		 text-decoration: none;
+		 color:black;
+	}
+	.blogrighticons{
+		height: 38px;
+		width: 140px;
+		background-color: #F5F5F5;
+		margin-top: -12px; 
+		font: 14px $ayselfont ;
+		text-align: center;
+		padding-top: 10px;
+	}
+		.righticon{
+			font-size: 108%;
+            
+				p{
+					margin:0px 5px 0px 5px;
+					font-size: 100%;
+					display: inline-block;
+					color:black;
+				}
+          	
+		}
+		.righticon2{
+				color: $ayselgreen; 
+				
+		}
+
+}
+.blogpic{
+	cursor:pointer;
+	margin-bottom: 50px;
+
+}
+
+.blogrownewsleft{
+	cursor:pointer;
+	text-align: justify;
+	margin-top:-30px;
+	font-family:$ayselfont;
+	margin-right: -10px;
+	padding-top: 50px;
+	p{
+		margin-top:10px;
+	}
+	margin-top:13px;
+	
+	#blogdatedayleft{
+	    position:relative;
+	    font: normal 130px $ayselfont;
+	    color:$gy;
+	    top: -14px;
+	    left: -61px;
+    
+   
+}
+    #blogdatemonthleft{
+	    position:absolute;;
+		font: normal 20px $ayselfont;
+		color:$gr;	
+		text-align:$textcenter;
+		margin-top:-86px;
+		margin-left:42px;
+    }
+
+}
+.btn{
+	background: white;
+	border:1px solid #ccc;
+	margin-right: 4px;
+}
+.icon{
+	cursor:pointer;
+	font-size: 86%;
+	margin:8px 10px 0px 10px; 
+	color:$ayselgray;
+	}
+
+
+
+@media only screen and (max-width:480px){
+	.blogpic{
+		width: 100%;
+		img{
+		width: 100%;
+	}
+	
+}
+#blogdatedayleft{
+	margin-left: 25%;
+	margin-top: 20px;
+
+}
+.row{
+	padding:0px;
+	margin:0px;
+}
+.iconspan{
+	.blogrighticons{
+	   margin-top: -0px;
+	   margin-left: -22px;
+	 }
+}
+}
+@media only screen and (min-width:481px)and(max-width:1365px){
+.blogpic{
+	width: 75%;
+	margin: 0 auto;
+	img{
+		width: 100%;
+	}
+	
+}
+#blogdatedayleft{
+	margin-left: 20px;
+	margin-top: 20px;
+
+}
+	
+
+}

@@ -1,0 +1,223 @@
+/************************************************/
+/************    Murad styles ;)     ************/
+/************************************************/
+
+
+a:hover { text-decoration: none; }
+
+$color-white: #fff;
+$color-green: #80a05d;
+$color-red: #d5240c;
+$color-red: #d5240c;
+$color-2b2b2b: #2b2b2b;
+$color-949494: #949494;
+$color-f1f1f1: #f1f1f1;
+$color-1f1f1f: #1f1f1f;
+$color-80a05d: #80a05d;
+$color-b1b1b1: #b1b1b1;
+$color-3b3b3b: #3b3b3b;
+$color-696969: #696969;
+$color-878787: #878787;
+$color-777777: #777777;
+
+/* Helper classes */
+.bg-white { background-color: $color-white }
+.bg-green { background-color: $color-green }
+.bg-f1f1f1 { background-color: $color-f1f1f1 }
+
+
+.color-white { color: $color-white }
+.color-green { color: $color-green }
+.color-red { color: $color-red }
+.color-2b2b2b { color: $color-2b2b2b }
+.color-949494 { color: $color-949494 }
+.color-3b3b3b { color: $color-3b3b3b }
+.color-1f1f1f { color: $color-1f1f1f }
+.color-878787 { color: $color-878787 }
+.color-777777 { color: $color-777777 }
+
+.txt-center { text-align: center }
+.txt-upper { text-transform: uppercase }
+.txt-lower { text-transform: lowercase }
+
+
+$gutter-height: 10;
+
+.no-margin { margin: 0 }
+.m-t-1 { margin-top: ($gutter-height * 1) + px }
+.m-t-2 { margin-top: ($gutter-height * 2) + px }
+.m-t-3 { margin-top: ($gutter-height * 3) + px }
+
+.m-b-1 { margin-bottom: ($gutter-height * 1) + px }
+.m-b-2 { margin-bottom: ($gutter-height * 2) + px }
+.m-b-3 { margin-bottom: ($gutter-height * 3) + px }
+.m-b-8 { margin-bottom: ($gutter-height * 8) + px }
+
+.p-t-9 { padding-top: ($gutter-height * 9) + px }
+.p-t-11 { padding-top: ($gutter-height * 11) + px }
+
+.p-b-11 { padding-bottom: ($gutter-height * 11) + px }
+
+.padding-section {
+	@extend .p-t-11;
+	@extend .p-b-11;
+}
+
+.side-padding-10p {
+	padding-right: 10%;
+	padding-left: 10%;
+}
+
+.side-padding {
+	padding-right: 15px;
+	padding-left: 15px;	
+}
+
+
+.fs-14 { font-size: 14px; }
+.fs-15 { font-size: 15px; }
+.fs-16 { font-size: 16px; }
+.fs-36 { font-size: 36px; }
+.fs-40 { font-size: 40px; }
+
+.f-lato { font-family: $font; } // $font from header.scss
+
+
+.txt-left{ text-align: left }
+.txt-right{ text-align: right }
+
+
+.display-b { display: block }
+.display-ib { display: inline-block }
+
+
+.headline {
+	position: relative;
+	overflow: hidden;
+	text-transform: uppercase;
+
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 15%;
+		height: 1px;
+		margin-top: -1px;
+		position: relative;
+		vertical-align: middle;
+		right: 15px;
+	}
+
+	&-green {
+		&:before { @extend .bg-green; }
+	}
+}
+
+.no-radius { border-radius: 0 }
+
+.overflow-h { overflow: hidden }
+
+.btn-wishlist { cursor: pointer }
+
+.align-center {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.breadcrumb {
+	li {
+		@extend .fs-14;
+		color: $color-696969;
+	}
+}
+
+
+/************************************************/
+/************ Bootstrap reset styles ************/
+.nav-tabs { border-bottom: none }
+
+.nav-tabs>li>a {
+	color: $color-b1b1b1;
+	@extend .txt-upper;
+	@extend .fs-16;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+	border: none;
+	background-color: transparent;
+	color: $color-80a05d;
+}
+
+.nav-tabs>li>a:hover {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.thumbnail .caption h3 { @extend .fs-16 }
+
+
+.breadcrumb>li+li:before { content: '' }
+
+.breadcrumb .fa:before {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.breadcrumb a {
+	color: $color-696969;
+	@extend .txt-lower;
+}
+
+.nav-stacked {
+	a {
+		text-transform: none !important;
+	}
+}
+
+//.ratingicon { cursor: pointer; }
+
+.lSSlideOuter .lSPager.lSGallery li.active,
+.lSSlideOuter .lSPager.lSGallery li:hover {
+	border-radius: 0 !important;
+}
+
+/************ End of Bootstrap reset styles ************/
+/*******************************************************/
+
+
+/* Items */
+.thumbnail-addCart {
+	min-height: 45px;
+	line-height: 45px;
+	@extend .m-b-3;
+
+	&:hover {
+		background-color: $color-green;
+
+		a { @extend .color-white }
+	}
+
+	a {
+		color: $color-3b3b3b;
+		text-decoration: none;
+		@extend .display-b;
+		@extend .txt-upper;
+	}
+}
+
+.i-frame {
+	padding: 90px 40px;
+	border: 5px solid $color-white;
+	@extend .txt-left;
+
+	p {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		@extend .color-949494;
+	}
+}

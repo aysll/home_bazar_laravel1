@@ -1,0 +1,16 @@
+.h-150 { height: ($gutter-height * 15) + px }
+
+.section-intro {
+	background-color: $contact-green;
+	@extend .h-150;
+	@extend .txt-center;
+	// @extend .overflow-h;
+
+	&Text {
+		height: 70px;
+		@extend .align-center;
+		@extend .fs-40;
+		@extend .color-white;
+		@extend .txt-upper;
+	}
+}

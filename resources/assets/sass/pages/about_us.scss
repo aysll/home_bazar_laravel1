@@ -1,0 +1,30 @@
+.aboutusPicture{
+	background-image: url('../../images/aboutus.jpg');
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 750px;
+        position: relative;
+        width: 100%;
+}
+.grPadMar{
+	margin: 0;
+	padding: 0;
+}
+#about_us{
+	padding: 5px 15px;
+	
+
+	p{
+		color: #8ac43f;
+		margin-top: 20px;
+		font-size: 25px;
+		line-height: 2;
+	}
+	li{
+		font-size: 17px;
+		line-height: 1.5;
+
+	}
+}
