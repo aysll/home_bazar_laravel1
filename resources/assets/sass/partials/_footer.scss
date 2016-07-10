@@ -1,0 +1,83 @@
+// Footer section start
+@font-face {
+font-family: 'Lato-Regular';
+src: url("../../assets/fonts/Lato-Regular.eot");
+src: local("☺"), url("../../assets/fonts/Lato-Regular.woff") format("woff"),url("../../assets/fonts/Lato-Regular.ttf") format("truetype"),url("../../assets/fonts/Lato-Regular.svg") format("svg");
+font-weight: normal;
+font-style: normal; }
+$textColor : #727272;
+
+.footer{
+	background: #292a29;
+	text-align: center;
+	color: $textColor;
+	line-height: 1.5;
+	p,h3,i{	color: white; }
+	.fa-twitter{ color: $textColor; }
+
+		hr{
+			opacity: 0.1;
+			margin: 40px 0;
+		}
+		
+				
+		.aboutUs{
+			margin: 40px  0;
+			display: inline-block;
+			color: $textColor;
+				h4{
+					font-size: 15px;
+				}
+				img{
+					width: inherit;
+					height: inherit;
+					margin-top: -40px;
+					margin-bottom: -30px;
+				}
+				ul{
+					margin: 0 auto;				
+					li{ 
+						list-style-type : none;
+						display: inline-block;
+						margin: 5px;
+					}
+				}	
+			}
+
+		.information{
+			margin: 40px 0;
+			display: inline-block;
+			line-height: 1.8;
+				li{ 
+					list-style-type : none;
+					a{
+						color: $textColor;
+						font-size: 15px;
+					}
+				}
+			}
+
+		.subscribe{
+			margin: 40px 0;
+			display: inline-block;
+				h4{
+					font-size: 15px;
+				}
+				input{
+					display: block;
+					margin: 30px auto 10px;
+					text-align: center;
+					border-radius: 0;
+				}
+				.btn-group{
+					background: #d9de55;
+					color: black;
+					border-radius: 0;		
+				}
+			}
+	}
+
+// Footer section end
+
+
+ 

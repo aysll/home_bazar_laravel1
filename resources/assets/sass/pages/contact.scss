@@ -1,0 +1,87 @@
+/*helper classes are here*/
+
+$contact-green: #8ac43f;
+$contact-b1b1b1: #b1b1b1;
+$contact-f1f1f1: #f1f1f1;
+.contact-padding { padding: 25px; }
+.contactGray { color: $contact-b1b1b1; }
+.height{ height: 30px; }
+
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+}
+	a , .fa-chevron-right a:hover {
+	text-decoration: none;
+	text-shadow: none;
+	color: #878787;
+	font-size: 14px;
+	background: none;
+}
+
+
+	.green_contact{
+		height: 150px;
+		background: $contact-green; 
+		padding-top: 40px;
+	}
+
+#contact{
+	padding-bottom: 40px;
+	.navbar-contact{
+		padding: 5px 15px;
+	}
+	.contactPicture{
+		background-image: url('../../images/ContactUs.png');
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 750px;
+        position: relative;
+        width: 100%;
+
+	}
+	.contactInformation{
+		background-color: white;
+		position: absolute;
+		bottom: 0;
+		padding: 5px 15px;
+		.fa{
+			color: $contact-green;
+			padding: 20px;
+		}
+		p{
+			padding-bottom: 15px;
+			line-height: 50%;
+			font-size: 14px;
+		}
+		.contactEnvelope{
+			border-right: 1px solid   $contact-f1f1f1;
+		}
+	}
+	h1{
+		padding: 5px 15px;
+	}
+	p{
+			padding-bottom: 15px;
+			line-height: 50%;
+			font-size: 14px;
+		}
+		button{
+			color: white;
+			border-radius: 0;
+			background: $contact-green;
+			width: 170px;
+		}
+		input, textarea{
+			background: $color-f1f1f1;
+		}
+
+		.form-control:focus {
+		  border-color: transparent;
+		  -webkit-box-shadow: none;
+		  box-shadow: none;
+		}
+}

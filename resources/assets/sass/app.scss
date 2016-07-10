@@ -1,2 +1,18 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+@import 'partials/_header';
+@import 'partials/_content';
+@import 'partials/_blog';
+@import 'partials/_arrival';
+@import 'partials/_footer';
+@import 'pages/blog_single';
+@import 'pages/blog_list';
+@import 'pages/contact';
+@import 'pages/shop_sidebar';
+@import 'pages/about_us';
+@import 'pages/delivery';
+@import 'pages/offers';
+
+@import 'pages/shop_single';
+@import 'pages/wish_list';
+
