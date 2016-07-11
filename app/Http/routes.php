@@ -31,3 +31,25 @@ Route::get('/shopsingle', 'pageController@shopSinglePage');
 
 Route::get('/wishlist', 'pageController@wishListPage');
 
+
+
+
+//Admin
+Route::get('/Admin',function(){
+  return view('Admin.index');
+});
+Route::get('/productList',function(){
+  return view('Admin.productList');
+});
+
+Route::get('/addProduct',function(){
+  return view('Admin.addProduct');
+});
+
+Route::get('/categoryList',function(){
+  return view('Admin.categoryList');
+});
+
+Route::get('/addCategory', 'CategoryController@create');
+Route::post('/addCategory', 'CategoryController@store');
+Route::get('/categoryList', 'CategoryController@show');
