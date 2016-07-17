@@ -13,7 +13,7 @@
         <div class="container">
           <ol class="breadcrumb bg-white m-t-2">
             <li><a href="/">Home</a> <i class="fa fa-angle-right" aria-hidden="true"></i></li>
-            <li>product</li>
+            <li>Shop Single</li>
           </ol>
         </div>
       </div>
@@ -58,7 +58,7 @@
 
             <p class="m-t-3 fs-15">This is a Demo Online Store. No orders shall be fulfilled. <br> Zorka is a Design-Driven Shop Theme for WooCommerce and WordPress. If you’re planning to start an online store right away, look no further, get this theme on ThemeForest. <br> This product page demonstrates a “Simple Product“.</p>
 
-            <div class="m-t-3"><a href="#" class="f-lato btn-card btn no-radius color-2b2b2b side-padding-10p">Add to card</a></div>
+            <div class="m-t-3"><a href="addtocard" class="f-lato btn-card btn no-radius color-2b2b2b side-padding-10p">Add to card</a></div>
 
             <div class="m-t-3">
               <span class="txt-upper fs-15 color display-ib btn-wishlist">
@@ -66,8 +66,6 @@
                 <span class="color-777777 side-padding">Add to wishlist</span>
               </span>
             </div>
-
-            <span class="display-b m-t-3 m-b-2">SKU: 123459789</span>
 
             <hr class="m-t-1 m-b-1" />
 
@@ -81,11 +79,30 @@
             <hr class="m-t-1 m-b-1" />
 
             <div>
-              <span class="fs-15">Tags: </span>
-              <a href="#" class="display-ib color-green fs-15">Shop</a>,
-              <a href="#" class="display-ib color-green fs-15">Shop</a>,
-              <a href="#" class="display-ib color-green fs-15">Shop</a>
+              <span class="fs-15">Color: </span>
+              <a href="#" class="display-ib color-green fs-15">Pink</a>,
+              <a href="#" class="display-ib color-green fs-15">Blue</a>,
+              <a href="#" class="display-ib color-green fs-15">Yellow</a>
             </div>
+
+            <div>
+              <span class="fs-15">Size: </span>
+              <a href="#" class="display-ib color-green fs-15">25*10*24</a>,
+            
+            </div>
+
+            <select>
+                <option value="1" selected="selected">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
 
             <!-- <hr class="m-t-1 m-b-1" /> -->
           </div>

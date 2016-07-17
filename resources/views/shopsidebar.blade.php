@@ -59,11 +59,9 @@
           <div class=" col-xs-11 col-sm-6 col-md-12 col-lg-12">
               <div class="social">
                   <ul>
-                      <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+                      <li><a href="https://www.facebook.com/homebazaarbaku/?fref=ts"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                      <li><a href="https://www.instagram.com/homebazaar_baku/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                   </ul>
                  <div class="input-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <i class="fa fa-search" aria-hidden="true"></i>
@@ -76,15 +74,9 @@
             <div class="category">
               <h2 class="text-center">Categories</h2>
               <ul class="list-group">
-                <li class="list-group-item"><a href="#">Birthday Gifts (7)</a></li>
-                <li class="list-group-item"><a href="#">Citchen Things (7)</a></li>
-                <li class="list-group-item" id="decorArt"><a style="color:green; font-weight: bold;" href="#">&nbsp; &nbsp; Decor Art (15)</a></li>
-                <li class="list-group-item"><a href="#">Every Day (3)</a></li>
-                <li class="list-group-item"><a href="#">Furniture (6)</a></li>
-                <li class="list-group-item"><a href="#">Illumination (4)</a></li>
-                <li class="list-group-item"><a href="#">Party </a></li>
-                <li class="list-group-item"><a href="#">Romantic (3)</a></li>
-                <li class="list-group-item"><a href="#">Special Goods</a></li>
+                @foreach(\App\Category::get() as $cateName)
+                    <li class="list-group-item"><a href="\shopsidebar/{!! $cateName->id !!}">{!! $cateName->CategoryName !!}</a></li>
+                @endforeach
               </ul>
             </div>
           </div>
@@ -92,99 +84,25 @@
 
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 
-           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="lil_arrival imgScale">
-                <a href="#">
-                  <img class="center-block img-responsive"  src="images/angel.jpg">
-                </a>
-                <h6 class="text-center">Small cactus variety pot<br> from France</h6>
-                <p class="text-center">$45.00</p>
-                <button type="button" class="btn btn-default btn-block btn-card">ADD TO CARD</button>
-            </div>
-          </div>
-           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-             <div class="lil_arrival imgScale">
-                <a href="#">
-                  <img class="center-block img-responsive"  src="images/angel.jpg">
-                </a>
-                <h6 class="text-center">Small cactus variety pot<br> from France</h6>
-                <p class="text-center">$45.00</p>
-                <button type="button" class="btn btn-default btn-block btn-card">ADD TO CARD</button>
-            </div>
-          </div>
-           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-             <div class="lil_arrival imgScale">
-                <a href="#">
-                  <img class="center-block img-responsive"  src="images/angel.jpg">
-                </a>
-                <h6 class="text-center">Small cactus variety pot<br> from France</h6>
-                <p class="text-center">$45.00</p>
-                <button type="button" class="btn btn-default btn-block btn-card">ADD TO CARD</button>
-            </div>
-          </div>
-           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-             <div class="lil_arrival imgScale">
-              <div class="trinagle"></div>
-              <i class="fa fa-eye" aria-hidden="true"></i>
-                <a href="#">
-                  <img class="center-block img-responsive"  src="images/angel.jpg">
-                </a>
-                <h6 class="text-center">Small cactus variety pot<br> from France</h6>
-                <p class="text-center">$45.00</p>
-                <button type="button" class="btn btn-default btn-block btn-card">ADD TO CARD</button>
-            </div>
-          </div>
-           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="lil_arrival imgScale">
-            <span class="pull-right" id="new">NEW</span>
-                <a href="#">
-                  <img class="center-block img-responsive"  src="images/angel.jpg">
-                </a>
-                <h6 class="text-center">Small cactus variety pot<br> from France</h6>
-                <p class="text-center">$45.00</p>
-                <button type="button" class="btn btn-default btn-block btn-card">ADD TO CARD</button>
-            </div>
-          </div>
-           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-             <div class="lil_arrival imgScale">
-                <a href="#">
-                  <img class="center-block img-responsive"  src="images/angel.jpg">
-                </a>
-                <h6 class="text-center">Small cactus variety pot<br> from France</h6>
-                <p class="text-center">$45.00</p>
-                <button type="button" class="btn btn-default btn-block btn-card">ADD TO CARD</button>
-            </div>
-          </div>
-           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-             <div class="lil_arrival imgScale">
-                <a href="#">
-                  <img class="center-block img-responsive"  src="images/angel.jpg">
-                </a>
-                <h6 class="text-center">Small cactus variety pot<br> from France</h6>
-                <p class="text-center">$45.00</p>
-                <button type="button" class="btn btn-default btn-block btn-card">ADD TO CARD</button>
-            </div>
-          </div>
-           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-             <div class="lil_arrival imgScale">
-                <a href="#">
-                  <img class="center-block img-responsive"  src="images/angel.jpg">
-                </a>
-                <h6 class="text-center">Small cactus variety pot<br> from France</h6>
-                <p class="text-center">$45.00</p>
-                <button type="button" class="btn btn-default btn-block btn-card">ADD TO CARD</button>
-            </div>
-          </div>
-           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-             <div class="lil_arrival imgScale">
-                <a href="#">
-                  <img class="center-block img-responsive"  src="images/angel.jpg">
-                </a>
-                <h6 class="text-center">Small cactus variety pot<br> from France</h6>
-                <p class="text-center">$45.00</p>
-                <button type="button" class="btn btn-default btn-block btn-card">ADD TO CARD</button>
-            </div>
-          </div>
+
+
+
+          @foreach($getProductByCategoryId as $categoryID)
+              <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                <div class="lil_arrival">
+                  <a href="\shopsingle/{!! $categoryID->id !!}">
+                    <img class="center-block img-responsive" style="height: 200px;" src="../uploads/images/{!! $categoryID->Picture !!}">
+                  </a>
+                  <h6 class="text-center">{!! $categoryID->ProductName !!}</h6>
+                  <p class="text-center">{!! $categoryID->UnitPrice !!}</p>
+                  <a href="shopsingle"><button type="button" class="btn btn-default btn-block btn-card">SİFARİŞ ET</button> </a>
+                </div>
+              </div>
+          @endforeach
+
+
+
+
         </div>
           
         </div>

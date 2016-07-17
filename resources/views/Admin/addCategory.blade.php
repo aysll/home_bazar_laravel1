@@ -110,7 +110,8 @@
 
 
                                <div class="portlet-body">
-                               <form class="form-horizontal" method="POST" action="/addCategory">
+   <form class="form-horizontal"  method="POST" enctype="multipart/form-data" action="/addCategory">
+
                                  <input type="hidden" name="_token" value="{!!csrf_token()!!}">
 
                                <div class="row">
@@ -148,7 +149,7 @@
                                                            <span class="btn red btn-outline btn-file">
                                                                <span class="fileinput-new"> Select image </span>
                                                                <span class="fileinput-exists"> Change </span>
-                                                               <input type="file" name="categoryFile"> </span>
+                                                               <input type="file" name="category_file"> </span>
                                                            <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
                                                        </div>
                                                    </div> </div>

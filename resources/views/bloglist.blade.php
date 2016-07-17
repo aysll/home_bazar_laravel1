@@ -33,7 +33,7 @@
       <div class="row">
       <div class="blogmarginpictures">
         <div class="col-md-5 col-md-offset-1 col-xs-12 col-sm-12">
-          <div class="blogpic"><a href="bloglist"><img class="img-responsive" src="images/coaster.jpg"></a></div>
+          <div class="blogpic"><a href="blogsingle"><img class="img-responsive" src="images/coaster.jpg"></a></div>
         </div>
 
               <div class="col-md-5 col-xs-12 col-sm-12 col-md-offset-1"> 

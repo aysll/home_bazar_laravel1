@@ -3,13 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Product;
+use App\Slider;
+use App\Category;
 use App\Http\Requests;
 
 class pageController extends Controller
 {
+
+		public function __construct() {
+				$this->middleware('auth');
+			}
+
+
 	public function indexPage(){
-		return view("index");
+		$productBestSeller=Product::all()->take(4);
+		$productBestSellerrow1=Product::all()->take(2);
+		$productBestSellerrow2=Product::all()->take(4);
+		$productNew=Product::skip(4)->take(6);
+		$slider=Slider::all();
+		$categoryName=Category::all();
+		return view("index",compact('productBestSeller','productBestSellerrow1', 'productBestSellerrow2' ,'slider', 'productNew', 'categoryName'));
 	}
 
 	public function contactPage(){
@@ -36,8 +50,11 @@ class pageController extends Controller
 		return view("offers");
 	}
 
-	public function shopSideBarPage(){
-		return view("shopsidebar");
+	public function shopSideBarPage($id){
+		$productBestSeller=Product::all();
+		 $getProductByCategoryId=Product::where('category_id', $id)->get();
+		// $getProductByCategoryId=Pro/duct::all();
+		return view("shopsidebar", compact('productBestSeller','getProductByCategoryId'));
 	}
 
 	public function shopSinglePage(){
@@ -47,5 +64,8 @@ class pageController extends Controller
 	public function wishListPage(){
 		return view("wishlist");
 	}
-
+	public function addtoCardPage(){
+		return view("addtoCard");
+	}
+	
 }

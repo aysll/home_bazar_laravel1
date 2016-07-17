@@ -117,6 +117,8 @@
                                              <tr>
                                                 <th>№ </th>
                                                 <th> Product Name </th>
+                                                <th> Product Image </th>
+                                                {{-- <th> Product Image </th> --}}
                                                 <th> Category </th>
                                                 <th> Price </th>
                                                 <th> Size </th>
@@ -128,19 +130,23 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                 @foreach($products as $product)
                                             <tr>
-                                                <th>1 </th>
-                                                <td> name1 </td>
-                                                <td> category1 </td>
-                                                <td> 100Azn </td>
-                                                <td> 200 </td>
-                                                <td> Violet </td>
-                                                <td> <a href="#"> Edit</a></td>
-                                                <td> <a href="#"> Delete</a> </td>
+                                                <th> {!! $product->id !!} </th>
+                                                <td> {!! $product->ProductName !!} </td>
+                                                <td> <img src="../uploads/images/{!! $product->Picture  !!}" style="width: 50px; height: 50px;" alt="" /> </td>
+                                                {{-- <td> <img src="../uploads/images/{!! $product->Picture  !!}" style="width: 50px; height: 50px;" alt="" /> </td> --}}
+                                                <td> {!! $product->Category->CategoryName !!} </td>    
+                                                
+                                                <td> {!! $product->UnitPrice !!} </td>
+                                                <td> {!! $product->Size !!} </td>
+                                                <td> {!! $product->Color !!} </td>
+                                                <td> <a href="editProduct/{!! $product->id !!}"> Edit</a></td>
+                                                <td> <a href="deleteProduct/{!! $product->id !!}"> Delete</a> </td>
                                                 <td> <a href="#"> <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i></a> </td>
 
                                             </tr>
-
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

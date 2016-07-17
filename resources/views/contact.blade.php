@@ -38,7 +38,7 @@
                   <i class="fa fa-4x fa-phone" aria-hidden="true"></i>
                 </div>
                 <div class="row">
-                  <p>(+994)507779825</p>
+                  <p>(+994)507779825</p><p>(+994)557779625</p>
                 </div>
             </div>
           </div>

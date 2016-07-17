@@ -129,8 +129,8 @@
                                                 <td> {!! $category->CategoryName !!} </td>
                                                 <td> {!! $category->Description !!} </td>
                                                 <td> {!! $category->Active !!} </td>
-                                                <td> <a href="{!! $category->id !!}"> Edit</a></td>
-                                                <td> <a href="{!! $category->id !!}"> Delete</a> </td>
+                                                <td> <a href="editCategory/{!! $category->id !!}"> Edit</a></td>
+                                                <td> <a href="delete/{!! $category->id !!}"> Delete</a> </td>
                                                 <td> <a href="#"> <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i></a> </td>
 
                                             </tr>

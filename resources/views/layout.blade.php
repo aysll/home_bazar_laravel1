@@ -20,6 +20,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
   </head>
   <body>
       <!-- Rüfət: start -->
@@ -58,22 +59,9 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
                 <li><a href="/">HOME</a></li>
-                <li><a href="#">DETOX LIFE</a></li>
-                <li><a href="#">HOME DECOR</a></li>
-                
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ORGANIZATION <span class="glyphicon glyphicon-menu-down"></span></a>
-                  <ul class="dropdown-menu dropOrg">
-                    <li><a href="#">HOME STORAGE</a></li>
-                    <li><a href="#">BEAUTY</a></li>
-                    <li><a href="#">JEWELLERY</a></li>
-                  </ul>
-                </li>
-                
-                <li><a href="#">TEXTILE</a></li>
-                <li><a href="#">KITCHEN GADGETS</a></li>
-                <li><a href="#">KIDS</a></li>
-                <li><a href="#">MEN</a></li>
+                @foreach(\App\Category::get() as $cateName)
+                    <li><a href="\shopsidebar/{!! $cateName->id !!}">{!! $cateName->CategoryName !!}</a></li>
+                @endforeach
                 <li><a href="bloglist">BLOG</a></li>
                 <li><a href="contact">CONTACT</a></li>
                 <li><a href="#"><i class="fa fa-2x fa-cart-plus" aria-hidden="true"></i></a></li>
@@ -94,7 +82,7 @@
 
 
 
-        <section class="container-fluid footer">
+        <section class="container-fluid footer" style="margin-top: 40px;">
       <div class="container">
       <div class="row">
 
@@ -107,11 +95,9 @@
          </div>
           <h4>HomeBazaar - I appreciate all the positive feedback. It means a lot</h4>
           <ul>
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.facebook.com/homebazaarbaku/?fref=ts"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
               <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/homebazaar_baku/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
           </ul>
         </div>
         <!-- About us End -->
@@ -121,12 +107,10 @@
           <p><b>INFORMATION</b></p>
           <hr/>
           <ul>
-            <li><a href="#">Shipping & Policies</a></li>
-            <li><a href="delivery">Delivery</a></li>
-            <li><a href="#">My Account</a></li>
-            <li><a href="#">Asked Questions</a></li>
-            <li><a href="#">Browse Products</a></li>
-            <li><a href="#">Payments & Returns</a></li>
+            <li><a href="about">Haqqımızda</a></li>
+            <li><a href="delivery">Ödəniş və Çatdırılma</a></li>
+            <li><a href="#">Hesabım</a></li>
+            <li><a href="shopsidebar">Məhsullarımız</a></li>
           </ul>
         </div>
         <!-- Information End -->

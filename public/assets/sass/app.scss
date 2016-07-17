@@ -1,5 +1,14 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
+body{
+	$font: Lato-Regular;
+	@font-face {
+	font-family: 'Lato-Regular';
+	src: url("../../fonts/Lato-Regular.eot");
+	src: local("☺"), url("../../fonts/Lato-Regular.woff") format("woff"),url("../../fonts/Lato-Regular.ttf") format("truetype"),url("../../fonts/Lato-Regular.svg") format("svg");
+	font-weight: normal;
+	font-style: normal; }
+	font-family: $font;
+}
 @import 'partials/_header';
 @import 'partials/_content';
 @import 'partials/_blog';

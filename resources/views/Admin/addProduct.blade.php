@@ -110,65 +110,77 @@
 
 
                                 <div class="portlet-body">
-                                <form class="form-horizontal">
+                                <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="/addProduct" >
+                                  <input type="hidden" name="_token" value="{{csrf_token()}}">
 
                                 <div class="row">
   <div class="col-md-6">
       <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">ProductName</label>
     <div class="col-sm-9">
-      <input  class="form-control" id="inputEmail3" >
+      <input  class="form-control" id="inputEmail3" name="ProductName" >
     </div>
 
   </div>
      <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">Description</label>
     <div class="col-sm-9">
-      <textarea style="height:100px;" name="" id="" cols="30" rows="10" class="form-control"></textarea>
+      <textarea style="height:100px;" name="ProductDescription" id="" cols="30" rows="10" class="form-control" name="ProductDescription"></textarea>
     </div>
 
   </div>
      <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">Category Name</label>
     <div class="col-sm-9">
-        <select class="bs-select form-control" data-live-search="true" data-size="8">
-                <option value="AF">Home</option>
-                <option value="AL">Kids</option>
+        <select class="bs-select form-control" data-live-search="true" data-size="8" name="CategoryName">
+          @foreach($categories as $category)
+                <option value="{{ $category->CategoryName }}">{!! $category->CategoryName  !!}</option>
+          @endforeach
         </select>
     </div>
 
-  </div>   <div class="form-group">
+  </div>
+
+  <!-- <div class="form-group">
+   <label for="inputEmail3" class="col-sm-3 control-label">Category Name</label>
+   <div class="col-sm-9">
+     <input  class="form-control" name="categoryName" >
+   </div>
+
+ </div> -->
+
+  <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">UnitPrice</label>
     <div class="col-sm-9">
-      <input  class="form-control" >
+      <input  class="form-control" name="UnitPrice">
     </div>
 
   </div>
    <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">Available Size</label>
     <div class="col-sm-9">
-      <input  class="form-control" >
+      <input  class="form-control" name="AvailableSize" >
     </div>
 
   </div>
    <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">Available Color</label>
     <div class="col-sm-9">
-      <input  class="form-control" >
+      <input  class="form-control" name="AvailableColor"  >
     </div>
 
   </div>
    <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">Size</label>
     <div class="col-sm-9">
-      <input  class="form-control" id="inputEmail3" >
+      <input  class="form-control" id="inputEmail3" name="Size" >
     </div>
 
   </div>
    <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">Color</label>
     <div class="col-sm-9">
-      <input  class="form-control" id="inputEmail3" >
+      <input  class="form-control" id="inputEmail3" name="Color">
     </div>
 
 
@@ -178,7 +190,7 @@
     <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">Discount</label>
     <div class="col-sm-9">
-      <input  class="form-control" id="inputEmail3" >
+      <input  class="form-control" id="inputEmail3" name="Discount">
     </div>
 
 
@@ -187,27 +199,27 @@
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">UnitWeight</label>
     <div class="col-sm-9">
-      <input  class="form-control" id="inputEmail3" >
+      <input  class="form-control" id="inputEmail3" name="UnitWeight">
     </div>
 </div>
 <div class="form-group">
   <label for="inputEmail3" class="col-sm-3 control-label">WeightType</label>
   <div class="col-sm-4">
-    <input  class="form-control" id="inputEmail3" >
+    <input  class="form-control" id="inputEmail3" name="WeightType">
   </div>
 </div>
 
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">UnitInStock</label>
     <div class="col-sm-9">
-      <input  class="form-control" id="inputEmail3" >
+      <input  class="form-control" id="inputEmail3" name="UnitInStock" >
     </div>
 </div>
 
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">UnitInOrder</label>
     <div class="col-sm-9">
-      <input  class="form-control" id="inputEmail3" >
+      <input  class="form-control" id="inputEmail3" name="UnitInOrder">
     </div>
 
 
@@ -224,11 +236,27 @@
             <span class="btn red btn-outline btn-file">
                 <span class="fileinput-new"> Select image </span>
                 <span class="fileinput-exists"> Change </span>
-                <input type="file" name="...">
+                <input type="file" name="Picture">
             </span>
       <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
         </div>
       </div>
+      <hr>
+          {{-- <h3>More Pictures</h3>
+          <button class="btn btn-primary add_images" type="button"><i class="glyphicon glyphicon-plus"></i></button>
+          <hr>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('.add_images').click(function()
+          {
+              all=$('input[name="Picture"]');
+              if(all.length==11) return; 
+              field=$('input[name="Picture"]:first').clone();
+              $(this).after(field);
+          })
+  });
+</script> --}}
      </div>
     </div>
 
@@ -293,3 +321,4 @@
             </div>
             <!-- END CONTENT -->
 @endsection
+

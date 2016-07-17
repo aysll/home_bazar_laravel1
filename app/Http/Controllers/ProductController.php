@@ -1,0 +1,112 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use DB;
+use App\Http\Requests;
+use App\Product;
+use App\Category;
+
+class ProductController extends Controller
+{
+
+  public function __construct() {
+    $this->middleware('auth');
+  }
+  public function create()
+  {
+    $categories = Category::all();
+    return view('Admin.addProduct',compact('categories'));
+  }
+
+  public function store(Request $request)
+  {
+ 
+    $product= New Product;
+    $image = $request->file('Picture');
+    $destinationPath = 'uploads/images';
+    if($image->isValid()){
+    $filename = time().'.'.$image->getClientOriginalExtension();
+    $image->move($destinationPath,$filename);
+
+  }
+    $product->ProductName=$request->ProductName;
+    $product->ProductDescription=$request->ProductDescription;
+    $product->UnitPrice=$request->UnitPrice;
+    $product->AvailableSize=$request->AvailableSize;
+    $product->Size=$request->Size;
+    $product->Color=$request->Color;
+    $product->Discount=$request->Discount;
+    $product->UnitWeight=$request->UnitWeight;
+    $product->WeightType=$request->WeightType;
+    $product->UnitInStock=$request->UnitInStock;
+    $product->UnitInOrder=$request->UnitInOrder;
+    $product->Picture = $filename;
+
+    $categoryName = $request->CategoryName;
+    $categories = Category::where('CategoryName',$categoryName)->get();
+    foreach($categories as $category)
+    {
+       echo $category['id'];
+       $product->category_id = $category['id'];
+    }
+  
+    $product->save();
+    return redirect('productList');
+  }
+
+  public function show(){
+    $products=Product::with('Category')->get();
+    $categories = Category::all();
+    return view('Admin.productList', compact('products','categories'));
+  }
+
+
+  public function edit(Product $product){
+    $categories = Category::all();
+    return view('Admin.editProduct', compact('product','categories'));
+  }
+
+
+
+  public function update(Request $request,  Product $product ,Category $category){
+    $image = $request->file('Picture');
+    $destinationPath = 'uploads/images';
+    if($image->isValid()){
+    $filename = time().'.'.$image->getClientOriginalExtension();
+    $image->move($destinationPath,$filename);
+  }
+
+    $product->ProductName=$request->ProductName;
+    $product->ProductDescription=$request->ProductDescription;
+    $product->UnitPrice=$request->UnitPrice;
+    $product->AvailableSize=$request->AvailableSize;
+    $product->Size=$request->Size;
+    $product->Color=$request->Color;
+    $product->Discount=$request->Discount;
+    $product->UnitWeight=$request->UnitWeight;
+    $product->WeightType=$request->WeightType;
+    $product->UnitInStock=$request->UnitInStock;
+    $product->UnitInOrder=$request->UnitInOrder;
+    $product->Picture = $filename;
+    $categoryName = $request->CategoryName;
+   
+    $categories = Category::where('CategoryName',$categoryName)->get();
+    foreach($categories as $category)
+    {
+       echo $category['id'];
+       $product->category_id = $category['id'];
+    }
+  
+
+
+  $product->save();
+  return redirect('productList');
+  }
+
+  public function destroy( Product $product){
+    $product->delete();
+    return back();
+  }
+}
